@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/navaneeth-dev/HardenedShell">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/HardenedShell.jpeg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">HardenedShell</h3>
