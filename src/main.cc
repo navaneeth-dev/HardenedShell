@@ -8,10 +8,8 @@ int main()
 	if (IsSandbox())
 		return 0;
 
-    if (!IsTarget())
-        return 0;
-    
-
+	if (!IsTarget())
+		return 0;
 
 	return 0;
 }
