@@ -4,7 +4,11 @@ project( HardenedShell CXX )
 set( PROJECT_NAME HardenedShell )
 set( CMAKE_EXPORT_COMPILE_COMMANDS on )
 
-#target_include_directories( HardenedShell PUBLIC )
+set( CMAKE_CXX_STANDARD 20 )
+
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+
+add_compile_definitions(_UNICODE=1 UNICODE=1)
 
 set( FILES
     src/main.cc
@@ -12,8 +16,6 @@ set( FILES
     src/target.cc
 )
 
-# preprocessor flags
-add_compile_definitions( DEBUG )
-
-# add compiled demons
 add_executable( HardenedShell ${FILES} )
+
+target_link_libraries(HardenedShell wininet)
