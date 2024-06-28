@@ -6,4 +6,3 @@
 BOOL IsTarget();
 
 #endif
-
