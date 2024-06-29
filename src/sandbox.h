@@ -1,6 +1,7 @@
 #ifndef SANDBOX_H
 #define SANDBOX_H
 
-bool IsSandbox();
+#include <windows.h>
+BOOL IsSandbox();
 
 #endif

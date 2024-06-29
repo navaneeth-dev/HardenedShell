@@ -1,4 +1,4 @@
-#include <windows.h>
+#include "sandbox.h"
 
 BOOL CheckMonitorRes(HMONITOR hMonitor, HDC hdcMonitor, LPRECT rect,
 		     LPARAM data)
